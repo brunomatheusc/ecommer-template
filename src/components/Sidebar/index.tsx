@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 import { MdStar, MdStarBorder } from 'react-icons/md';
-import { FiStar } from 'react-icons/fi';
 
 import { Container, Wrapper, Title, Categories, CategoryWrapper, CategoryName, Quantity, Brands, Rating, Price, MinMax, Finish } from './styles';
 
@@ -20,54 +19,27 @@ const Sidebar: FC = () => {
 			<Categories>
 				<Title>Categories</Title>
 
-				<CategoryWrapper>
-					<CategoryName>Category name</CategoryName>
-					<Quantity>320</Quantity>
-				</CategoryWrapper>
-
-				<CategoryWrapper>
-					<CategoryName>Category name</CategoryName>
-					<Quantity>112</Quantity>
-				</CategoryWrapper>
-
-				<CategoryWrapper>
-					<CategoryName>Category name</CategoryName>
-					<Quantity>32</Quantity>
-				</CategoryWrapper>
-
-				<CategoryWrapper>
-					<CategoryName>Category name</CategoryName>
-					<Quantity>42</Quantity>
-				</CategoryWrapper>
+				{ [320, 112, 32, 42].map((category, index) => {
+					return (
+						<CategoryWrapper key={ index }>
+							<CategoryName>Category name</CategoryName>
+							<Quantity>{ category}</Quantity>
+						</CategoryWrapper>
+					);
+				})}
 			</Categories>
 
 			<Brands>
 				<Title>Brands</Title>
-				
-				<Wrapper>
-					<input type="checkbox"/>
-					<span>Filtre by brand item</span>				
-				</Wrapper>
 
-				<Wrapper>
-					<input type="checkbox" checked />
-					<span>Filtre by brand item</span>				
-				</Wrapper>
-
-				<Wrapper>
-					<input type="checkbox" checked />
-					<span>Filtre by brand item</span>				
-				</Wrapper>
-
-				<Wrapper>
-					<input type="checkbox"/>
-					<span>Filtre by brand item</span>				
-				</Wrapper>
-
-				<Wrapper>
-					<input type="checkbox"/>
-					<span>Filtre by brand item</span>				
-				</Wrapper>				
+				{ [0, 1, 2, 3, 4].map((brand, index) => {
+					return (
+						<Wrapper key={ index }>
+							<input type="checkbox"/>
+							<span>Filtre by brand item</span>				
+						</Wrapper>
+					);
+				}) }				
 			</Brands>
 
 			<Rating>

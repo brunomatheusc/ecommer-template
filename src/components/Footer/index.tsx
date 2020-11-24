@@ -2,13 +2,13 @@ import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 import Flex from '../Flex';
 
-import { Container } from './styles';
+import { Container, Wrapper } from './styles';
 import Badge from './../Badge/index';
 
 const Footer: FC = () => {
   	return (
 		<Container>
-			<Flex justify="space-between">
+			<Wrapper justify="space-between">
 				<Flex flexDirection="column">
 					<h3>Get in touch</h3>
 					<Link to="/">About Us</Link>
@@ -41,9 +41,9 @@ const Footer: FC = () => {
 					<Link to="/">Chat with us</Link>
 					<Link to="/">Help</Link>
 				</Flex>
-			</Flex>
+			</Wrapper>
 
-			<Flex flexDirection="column" justify="flex-start">
+			<Wrapper flexDirection="column" justify="flex-start">
 				<h3>Product Tags</h3>
 
 				<Flex justify="flex-start">
@@ -60,7 +60,23 @@ const Footer: FC = () => {
 					<Badge><span>Bananas</span></Badge>
 					<Badge><span>Grapes</span></Badge>
 				</Flex>
-			</Flex>
+
+				<br/>
+
+				<Flex justify="flex-start">
+					<Badge><span>Beans</span></Badge>
+					<Badge><span>Carrots</span></Badge>
+					<Badge><span>Apples</span></Badge>
+					<Badge><span>Garlic</span></Badge>
+					<Badge><span>Mushrooms</span></Badge>
+					<Badge><span>Tomatoes</span></Badge>
+					<Badge><span>Chilli peppers</span></Badge>
+				</Flex>
+			</Wrapper>
+
+			<Wrapper>
+				<span>Copyright © 2020 petrbilek.com</span>
+			</Wrapper>
 		</Container>
 	);
 }

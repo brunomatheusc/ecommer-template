@@ -5,19 +5,11 @@ export const Container = styled.div`
 	align-items: center;
 	justify-content: space-between;
 
-	padding: 60px 0;
+	margin-top: 60px;
 
 	div {
 		> span {
 			margin-left: 4px;
 		}
 	}
-`;
-
-export const Pages = styled.div`
-
-`;
-
-export const ProductsCount = styled.div`
-
 `;

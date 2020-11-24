@@ -20,7 +20,7 @@ export default createGlobalStyle`
 	}
 
 	.main {
-		padding: 64px 45px;
+		padding: 64px 45px 0;
 	}
 
 	:root {

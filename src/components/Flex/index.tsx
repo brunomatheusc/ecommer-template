@@ -9,9 +9,9 @@ interface FlexProps {
 	className?: string;
 }
 
-const Flex: FC<FlexProps> = ({ children, flexDirection, align, justify, className }) => {
+const Flex: FC<FlexProps> = ({ children, flexDirection, align, justify, className, ...rest }) => {
 	return (
-		<Container className={ className } flexDirection={ flexDirection } align={ align } justify={ justify}>
+		<Container { ...rest } className={ className } flexDirection={ flexDirection } align={ align } justify={ justify}>
 			{ children }
 		</Container>
 	);

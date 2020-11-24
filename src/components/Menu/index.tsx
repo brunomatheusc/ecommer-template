@@ -1,41 +1,19 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useState } from 'react';
 
 import { Container } from './styles';
 
 const Menu: FC = () => {
+	const [options, setOptions] = useState([ "Bakery", "Fruit and vegetables", "Meat and fish", "Drinks", "Kitchen", "Special nutrition", "Baby", "Pharmacy" ]);
+
 	return (
 		<Container>
-			<select name="" id="">
-				<option value="">Bakery</option>
-			</select>
-
-			<select name="" id="">
-				<option value="">Fruit and vegetables</option>
-			</select>
-
-			<select name="" id="">
-				<option value="">Meat and fish</option>
-			</select>
-
-			<select name="" id="">
-				<option value="">Drinks</option>
-			</select>
-
-			<select name="" id="">
-				<option value="">Kitchen</option>
-			</select>
-
-			<select name="" id="">
-				<option value="">Special nutrition</option>
-			</select>
-
-			<select name="" id="">
-				<option value="">Baby</option>
-			</select>
-
-			<select name="" id="">
-				<option value="">Pharmacy</option>
-			</select>
+			{ options.map((option, index) => {
+				return (
+					<select key={ index }  name="" id="">
+						<option value="">{ option }</option>
+					</select>
+				);
+			})}
 		</Container>
 	);
 }
