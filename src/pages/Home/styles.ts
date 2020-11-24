@@ -1,76 +1,73 @@
 import styled from 'styled-components';
 import Flex from '../../components/Flex';
 
+import background from '../../assets/background-banner.svg';
+
 export const Container = styled.div`
     display: flex;
     flex-direction: row;
+
+	h3 {
+		font-size: 18px;
+		font-weight: 600;
+	}
 `;
 
-export const Wrapper = styled.div`
+export const Basics = styled.div`
 	display: flex;
-	flex-direction: column;
-    flex-grow: 1;
-	margin-left: 32px;  
-`;
+	flex: 1;
+	align-items: center;
+	justify-content: space-between;
 
-export const ProductBox = styled.div`
-	display: flex;
 	height: 280px;
 
-	background: #ffffff;
-
-	border: 1px solid #d1d1d1;
-	box-sizing: border-box;
-	border-radius: 12px;	
-
-	& + div {
-		margin-top: 32px;
-	}
-`;
-
-export const Image = styled.div`
-	height: 100%;
-	width: 268px;
-
-	background: #f9f9f9;
-	border-radius: 12px;
-`;
-
-export const ProductInfo = styled.div`
-	width: 45%;
-	padding: 32px 32px 36px 32px;
-`;
-
-export const ProductValue = styled(Flex)`
-	width: 30%;
-	
-	padding: 32px 32px 36px 32px;
-
-	> span, > strong {
-		color: #a9a9a9;
+	h3 {
+		margin-bottom: 16px;
 	}
 
-	span {
-		font-size: 12px;
-		font-weight: 400;
-		margin-bottom: 12px;
+	a {
+		color: #6a983c;
 	}
 
-	button + button {
+	a + a {
 		margin-top: 12px;
 	}
-`;
 
-export const Star = styled.div`
-	margin-top: 8px;
-`;
-
-export const Extra = styled.div`
-	margin-top: 25px;
-
-	span {
-		font-size: 14px;
-		font-weight: 400;
-		color: #a9a9a9;
+	button {
+		margin-top: 48px;
 	}
+`;
+
+export const Banners = styled(Flex)`
+	height: 280px;
+	width: 38%;
+
+	div:nth-child(1) {
+		margin: 48px 33px;
+	}
+
+	button {
+		margin: 48px 0 32px 32px;
+	}
+
+	background: #f4f8ec;
+	border-radius: 12px;	
+	background-image: url(${background});
+	background-size: cover;
+`;
+
+export const BestSellings = styled.div`
+
+`;
+
+export const MoreProducts = styled.div`
+
+`;
+
+export const Quotes = styled.div`
+
+`;
+
+export const Headline = styled.div`
+
 `;

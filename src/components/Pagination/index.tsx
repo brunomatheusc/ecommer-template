@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import { Container, Pages } from './styles';
+import { Container } from './styles';
 
 import Button from '../Button';
 import Badge from '../Badge';
@@ -10,9 +10,9 @@ import { FiChevronDown } from 'react-icons/fi';
 const Pagination: FC = () => {
   	return (
 		<Container>
-			<Pages>
+			<Flex>
 				<span>Page: 1 2 3 4</span>
-			</Pages>
+			</Flex>
 
 			<Button>Show more products&nbsp;<FiChevronDown /></Button>		
 
