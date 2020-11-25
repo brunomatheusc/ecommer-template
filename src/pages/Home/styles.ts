@@ -17,7 +17,6 @@ const basicDiv = css`
 	display: flex;
 	flex: 1;
 	align-items: center;
-	justify-content: space-between;
 
 	height: 280px;
 
@@ -40,11 +39,19 @@ const basicDiv = css`
 
 export const Basics = styled.div`
 	${basicDiv};
+
+	> div {
+		width: 268px;
+	}
+
+	div:nth-child(2) {
+		margin: 0 32px;
+	}
 `;
 
 export const Banners = styled(Flex)`
+	flex: 1;
 	height: 280px;
-	width: 38%;
 
 	div:nth-child(1) {
 		margin: 48px 33px;
@@ -63,11 +70,37 @@ export const Banners = styled(Flex)`
 export const BestSellings = styled(Flex)`
 	${basicDiv};
 	margin: 64px 0;
+
+	> div:nth-child(1) {
+		height: 100%;
+		width: 268px;
+	}
+
+	> div:nth-child(2) {
+		height: 100%;
+		margin-left: 32px;
+
+		flex: 1;
+		justify-content: space-between;
+	}
 `;
 
 export const MoreProducts = styled.div`
 	${basicDiv};
 	margin: 64px 0;
+
+	> div:nth-child(1) {
+		height: 100%;
+		width: 268px;
+	}
+
+	> div:nth-child(2) {
+		height: 100%;
+		margin-left: 32px;
+
+		flex: 1;
+		justify-content: space-between;
+	}
 `;
 
 export const Quotes = styled.div`
@@ -122,10 +155,7 @@ export const Headline = styled.div`
 `;
 
 export const Box = styled.div`
-	display: flex;
-	flex-direction: column;
-
-	height: 323px;
+	height: 350px;
 	padding: 16px;
 
 	border: 1px solid #d1d1d1;

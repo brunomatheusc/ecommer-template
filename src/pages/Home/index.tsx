@@ -19,7 +19,9 @@ const Home: FC = () => {
 						<Link to="/">Drinks</Link>
 						<Link to="/">Kitchen</Link>
 						
-						<Button>More categories</Button>
+						<Flex>
+							<Button>More categories</Button>
+						</Flex>
 					</Flex>
 
 					<Banners flexDirection="column">
@@ -58,26 +60,28 @@ const Home: FC = () => {
 
 						<Flex>
 							<Button>More products</Button>
-						</Flex>
-						
+						</Flex>						
 					</Flex>
 
-				{ [0, 1, 2].map((_, index) => {
-					return (
-						<Flex key={ index }>
-							<Box>
-								<Image></Image>
-								<Title>Product Title</Title>
-								<span>Space for a small product description</span>
+					<Flex flexDirection="row" flex={ 1 } justify="center">
+					{ [0, 1, 2].map((_, index) => {
+						return (
+							<Flex key={ index }>
+								<Box>
+									<Image></Image>
+									<Title>Product Title</Title>
+									<span>Space for a small product description</span>
 
-								<Info>
-									<Price>1.48 USD</Price>
-									<Button>Buy now</Button>
-								</Info>
-							</Box>
-						</Flex>
-					);
-				})}
+									<Info>
+										<Price>1.48 USD</Price>
+										<Button>Buy now</Button>
+									</Info>
+								</Box>
+							</Flex>
+						);
+					})}
+					</Flex>
+
 				</BestSellings>
 
 				<MoreProducts>
@@ -95,22 +99,24 @@ const Home: FC = () => {
 						
 					</Flex>
 
-				{ [0, 1, 2].map((_, index) => {
-					return (
-						<Flex key={ index }>
-							<Box>
-								<Image></Image>
-								<Title>Product Title</Title>
-								<span>Space for a small product description</span>
-								
-								<Info>
-									<Price>1.48 USD</Price>
-									<Button>Buy now</Button>
-								</Info>
-							</Box>
-						</Flex>
-					);
-				})}
+					<Flex flexDirection="row" flex={ 1 } justify="center">
+					{ [0, 1, 2].map((_, index) => {
+						return (
+							<Flex key={ index }>
+								<Box>
+									<Image></Image>
+									<Title>Product Title</Title>
+									<span>Space for a small product description</span>
+									
+									<Info>
+										<Price>1.48 USD</Price>
+										<Button>Buy now</Button>
+									</Info>
+								</Box>
+							</Flex>
+						);
+					})}
+					</Flex>
 				</MoreProducts>
 
 				<Quotes>

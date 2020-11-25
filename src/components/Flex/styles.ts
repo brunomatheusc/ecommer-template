@@ -4,6 +4,7 @@ interface IProps {
 	flexDirection?: string;
 	align?: string;
 	justify?: string;
+	flex?: number;
 }
 
 export const Container = styled.div<IProps>`
@@ -19,5 +20,9 @@ export const Container = styled.div<IProps>`
 	
 	${({ justify }) => justify && css `
 		justify-content: ${justify};
+	`};
+
+	${({ flex }) => flex && css`
+		flex: ${flex};
 	`};
 `;
