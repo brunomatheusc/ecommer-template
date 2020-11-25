@@ -7,7 +7,7 @@ const Breadcrumb: FC = () => {
 		<Container>
 			<div>
 				<span>Homepage / </span>
-				<span>Cachepot</span>
+				<span>Fruits and vegetables</span>
 			</div>
 		</Container>
 	);

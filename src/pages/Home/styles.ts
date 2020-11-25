@@ -7,6 +7,8 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
 
+	margin-top: 64px;
+
 	h3 {
 		font-size: 18px;
 		font-weight: 600;
@@ -203,7 +205,6 @@ export const Info = styled.div`
 		margin: 0;
 	}
 `;
-
 
 export const Price = styled.h3`
 	font-size: 18px;

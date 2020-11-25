@@ -12,12 +12,12 @@ const Navigation: FC = () => {
 
 			<Options>
 				<Frame>
-					<FiGrid />
+					<FiGrid color="#6a983c" />
 					<span>Grid view</span>
 				</Frame>
 
 				<Frame>
-					<FiList />
+					<FiList color="#6a983c" className="inactive" />
 					<span>List view</span>
 				</Frame>
 

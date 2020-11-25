@@ -8,7 +8,7 @@ const Sidebar: FC = () => {
 		let starItems: JSX.Element[] = [];
 
 		for (let i = 0; i < 5; i++) {
-			starItems.push((i < stars) ? <MdStar size={ 18 } color="#fdbc15" /> : <MdStarBorder size={ 18 } />);
+			starItems.push((i < stars) ? <MdStar size={ 18 } color="#fdbc15" key={ i } /> : <MdStarBorder size={ 18 } key={ i } />);
 		}
 
 		return starItems;
@@ -32,7 +32,7 @@ const Sidebar: FC = () => {
 			<Brands>
 				<Title>Brands</Title>
 
-				{ [0, 1, 2, 3, 4].map((brand, index) => {
+				{ [0, 1, 2, 3, 4].map((_, index) => {
 					return (
 						<Wrapper key={ index }>
 							<input type="checkbox"/>
@@ -47,7 +47,7 @@ const Sidebar: FC = () => {
 
 				{ [5, 4, 3, 2, 1].map(rate => {
 					return(
-						<Wrapper>
+						<Wrapper key={ rate }>
 							<input type="checkbox"/>
 							{ Stars(rate) }
 						</Wrapper>

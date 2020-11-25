@@ -34,6 +34,10 @@ export default createGlobalStyle`
 		padding: 16px 45px 64px;
 	}
 
+	.inactive {
+		color: #a9a9a9 !important;
+	}
+
 	:root {
 		--color-white: #fff;
 	}

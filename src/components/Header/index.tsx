@@ -4,12 +4,13 @@ import { FiUser, FiShoppingBag, FiSearch } from 'react-icons/fi';
 import { Container, LogoHeader, Search, InputSearch, Actions, Bag, Counter } from './styles';
 
 import Logo from '../../assets/brand.svg';
+import { Link } from 'react-router-dom';
 
 const Header: FC = () => {
 	return (
 		<Container>
 			<nav>
-				<LogoHeader src={ Logo } />
+				<Link to="/"><LogoHeader src={ Logo } /></Link>				
 
 				<Search>
 					<select name="" id="">
