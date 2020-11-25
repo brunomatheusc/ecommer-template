@@ -87,9 +87,9 @@ const Home: FC = () => {
 				<MoreProducts>
 					<Flex flexDirection="column">
 						<h3>Best selling products</h3>
-						<Link to="/">Kitchen</Link>
-						<Link to="/">Meat and fish</Link>
-						<Link to="/">Special nutrition</Link>
+						<Link to="/">Carrots</Link>
+						<Link to="/">Tomatoes</Link>
+						<Link to="/">Potatoes</Link>
 						<Link to="/">Pharmacy</Link>
 						<Link to="/">Baby</Link>
 
@@ -120,7 +120,7 @@ const Home: FC = () => {
 				</MoreProducts>
 
 				<Quotes>
-					<h2>Our customer says</h2>
+					<h2>Our customers says</h2>
 
 					<Carousel>
 					{ [0, 1, 2].map((_, index) => {
@@ -137,8 +137,27 @@ const Home: FC = () => {
 					</Carousel>
 				</Quotes>
 
-				<Headline>
+				<Headline flexDirection="column">
+					<h2>Section Headline</h2>
 
+					<Flex flexDirection="row" flex={ 1 } justify="space-between">
+					{ [0, 1, 2, 3].map((_, index) => {
+						return (
+							<Flex key={ index }>
+								<Box>
+									<Image></Image>
+									<Title>Product Title</Title>
+									<span>Space for a small product description</span>
+									
+									<Info>
+										<Price>1.48 USD</Price>
+										<Button>Buy now</Button>
+									</Info>
+								</Box>
+							</Flex>
+						);
+					})}
+					</Flex>
 				</Headline>
 			</Container>
 		</>

@@ -13,13 +13,13 @@ const Header: FC = () => {
 
 				<Search>
 					<select name="" id="">
-						<option value="">Categorias</option>
-						<option value="">Sousplat</option>
-						<option value="">Cachepot</option>
+						<option value="">All Categories</option>
+						<option value="">Bakery</option>
+						<option value="">Meat and Fish</option>
 					</select>
 
 					<InputSearch>
-						<input type="text" placeholder="Procurar produtos, categorias..." />
+						<input type="text" placeholder="Search products, categories..." />
 						
 						<button><FiSearch /></button>					
 					</InputSearch>

@@ -148,10 +148,16 @@ export const QuotesBox = styled.div`
 
 		padding: 24px 32px;
 	}
+
+	> small {
+		color: #a9a9a9;
+	}
 `;
 
-export const Headline = styled.div`
-
+export const Headline = styled(Flex)`
+	> h2 {
+		margin-bottom: 32px;
+	}
 `;
 
 export const Box = styled.div`

@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { shade } from 'polished';
 
 export default createGlobalStyle`
 	* {
@@ -23,6 +24,10 @@ export default createGlobalStyle`
 		font-size: 12px;
 		font-weight: 400;
 		text-decoration: none;
+
+		&:hover {
+			color: ${shade(0.2, '#46760a')};
+		}
 	}
 
 	.main {

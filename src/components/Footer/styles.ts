@@ -21,6 +21,10 @@ export const Wrapper = styled(Flex)`
 	& + & {
 		margin-top: 48px;
 	}
+
+	> h3 {
+		margin-bottom: 16px;
+	}
 `;
 
 styled(Badge)`
