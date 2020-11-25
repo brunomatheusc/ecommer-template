@@ -11,7 +11,12 @@ const Pagination: FC = () => {
   	return (
 		<Container>
 			<Flex>
-				<span>Page: 1 2 3 4</span>
+				<span>Page:&nbsp;</span>
+				{ [1, 2, 3, 4].map((page, index) => {
+					return (
+						<span key={ index }>{ page }</span>
+					);
+				})}
 			</Flex>
 
 			<Button>Show more products&nbsp;<FiChevronDown /></Button>		

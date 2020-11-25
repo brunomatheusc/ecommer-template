@@ -4,6 +4,8 @@ import Flex from '../../components/Flex';
 export const Container = styled.div`
     display: flex;
     flex-direction: row;
+
+	margin-top: 64px;
 `;
 
 export const Wrapper = styled.div`

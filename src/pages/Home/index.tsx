@@ -13,11 +13,11 @@ const Home: FC = () => {
 				<Basics>
 					<Flex flexDirection="column">
 						<h3>Category Menu</h3>
-						<Link to="/">Bakery</Link>
-						<Link to="/">Fruit and vegetables</Link>
-						<Link to="/">Meat and fish</Link>
-						<Link to="/">Drinks</Link>
-						<Link to="/">Kitchen</Link>
+						<Link to="/category">Bakery</Link>
+						<Link to="/category">Fruit and vegetables</Link>
+						<Link to="/category">Meat and fish</Link>
+						<Link to="/category">Drinks</Link>
+						<Link to="/category">Kitchen</Link>
 						
 						<Flex>
 							<Button>More categories</Button>
@@ -52,11 +52,11 @@ const Home: FC = () => {
 				<BestSellings>
 					<Flex flexDirection="column">
 						<h3>Best selling products</h3>
-						<Link to="/">Kitchen</Link>
-						<Link to="/">Meat and fish</Link>
-						<Link to="/">Special nutrition</Link>
-						<Link to="/">Pharmacy</Link>
-						<Link to="/">Baby</Link>
+						<Link to="/category">Kitchen</Link>
+						<Link to="/category">Meat and fish</Link>
+						<Link to="/category">Special nutrition</Link>
+						<Link to="/category">Pharmacy</Link>
+						<Link to="/category">Baby</Link>
 
 						<Flex>
 							<Button>More products</Button>
@@ -87,11 +87,11 @@ const Home: FC = () => {
 				<MoreProducts>
 					<Flex flexDirection="column">
 						<h3>Best selling products</h3>
-						<Link to="/">Carrots</Link>
-						<Link to="/">Tomatoes</Link>
-						<Link to="/">Potatoes</Link>
-						<Link to="/">Pharmacy</Link>
-						<Link to="/">Baby</Link>
+						<Link to="/category">Carrots</Link>
+						<Link to="/category">Tomatoes</Link>
+						<Link to="/category">Potatoes</Link>
+						<Link to="/category">Pharmacy</Link>
+						<Link to="/category">Baby</Link>
 
 						<Flex>
 							<Button>More products</Button>

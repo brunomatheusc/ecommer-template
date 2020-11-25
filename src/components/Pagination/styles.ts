@@ -7,9 +7,18 @@ export const Container = styled.div`
 
 	margin-top: 60px;
 
-	div {
-		> span {
+	> div {
+		span:nth-child(1) {
 			margin-left: 4px;
+			color: #a9a9a9;
+		}
+
+		span:nth-child(4) {
+			color: #a9a9a9;
+		}
+
+		span + span {
+			margin-left: 8px;
 		}
 	}
 `;

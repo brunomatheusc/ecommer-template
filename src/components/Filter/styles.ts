@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
 	height: 108px;
 
-	padding: 16px 45px;
+	padding: 16px 0;
 `;
 
 export const Filters = styled.div`

@@ -1,9 +1,10 @@
 import React, { FC } from 'react';
-import Sidebar from '../../components/Sidebar';
 
 import { MdStar, MdStarBorder, MdNavigateNext, MdFavoriteBorder } from 'react-icons/md';
 
 import { Container, Wrapper, ProductBox, Image, ProductInfo, Star, Extra, ProductValue } from './styles';
+
+import Sidebar from '../../components/Sidebar';
 import Grid from '../../components/Grid';
 import Button from '../../components/Button';
 import Pagination from '../../components/Pagination';

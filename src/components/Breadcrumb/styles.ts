@@ -7,7 +7,7 @@ export const Container = styled.div`
 	align-items: center;
 
 	div {
-		padding: 16px 45px;
+		padding: 16px 0;
 
 		span {
 			font-size: 12px;
