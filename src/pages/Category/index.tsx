@@ -10,9 +10,10 @@ import Filter from '../../components/Filter';
 
 import ListView from './ListView';
 import GridView from './GridView';
+import useNavigation from '../../context/NavigationContext';
 
 const Category: FC = () => {
-	const [gridType, setGridType] = useState('list');
+	const { listType } = useNavigation();
 
 	return (
 		<>
@@ -23,7 +24,7 @@ const Category: FC = () => {
 			<Container>
 				<Sidebar />
 
-				{ (gridType == 'grid') ? <ListView /> : <GridView />}				
+				{ (listType == 'list') ? <ListView /> : <GridView />}				
 			</Container>
 
 			<Pagination />

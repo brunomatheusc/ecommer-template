@@ -19,6 +19,10 @@ export const Frame = styled.div`
 	display: flex;
 	align-items: center;
 
+	&:nth-child(1):hover, &:nth-child(2):hover {
+		cursor: pointer;
+	}
+
 	& + div {
 		margin-left: 24px;
 	}
