@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Flex from '../../components/Flex';
 import Grid from '../../components/Grid';
 
@@ -158,10 +158,65 @@ export const Badge = styled.span`
 
 export const Tabs = styled(Flex)`
 	margin-top: 62px;
+	padding-bottom: 16px;
+
+	> div {
+		cursor: pointer;
+	}
 `;
 
 export const Tab = styled.div`
 	& + & {
 		margin-left: 32px;
+	}
+`;
+
+interface TabActiveProps {
+	active: boolean;
+}
+
+export const TabActive = styled(Flex)<TabActiveProps>`
+	margin-top: 48px;
+
+	h3 {
+		margin-bottom: 8px;
+	}
+
+	h3 + span {
+		margin-bottom: 32px;
+	}
+
+	${({ active }) => !active && css`
+		display: none;
+	`};
+
+	table {
+		border-collapse: collapse;
+	}
+
+	table thead {
+		text-align: left;
+	}
+
+	table thead th {
+		padding-bottom: 6px;
+		vertical-align: bottom;
+	    border-bottom: 2px solid #dee2e6;		
+	}
+
+	tbody tr td {
+		padding: 12px 0;
+	}
+
+	tbody tr:nth-of-type(odd) {
+		background-color: rgba(0,0,0,.05);
+	}
+`;
+
+export const RelatedProducts = styled(Flex)`
+	margin-top: 64px;
+
+	> div {
+		margin-bottom: 32px;
 	}
 `;

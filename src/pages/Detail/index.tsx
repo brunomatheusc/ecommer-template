@@ -1,13 +1,17 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import { MdAdd, MdFavoriteBorder, MdGradient, MdStar, MdStarBorder } from 'react-icons/md';
 import Breadcrumb from '../../components/Breadcrumb';
 import Button from '../../components/Button';
 import Flex from '../../components/Flex';
+import Product from '../../components/Product';
+import Tab from '../../components/Tab';
 
 import { Container, Wrapper, ProductBox, ProductImage, GridWrapper,Image, Badge, ProductInfo, WishList,
-		 Price, InputSimple, Tabs, Tab, Title, Description, Box, ButtonSimple } from './styles';
+		Price, InputSimple, Tabs, TabActive, Title, Description, Box, ButtonSimple, RelatedProducts } from './styles';
 
 const Detail: FC = () => {
+	const [tabActive, setTabActive] = useState(1);
+
 	return (
 		<Container>
 			<Breadcrumb />
@@ -86,11 +90,61 @@ const Detail: FC = () => {
 					</ProductInfo>
 				</ProductBox>
 
-				<Tabs justify="flex-start">
-					<Tab>Description</Tab>
-					<Tab>Reviews</Tab>
-					<Tab>Questions</Tab>
+				<Tabs flexDirection="column" justify="flex-start">
+					<Flex>
+						<Tab onClick={() => setTabActive(1) } title="Description" active={ !!(tabActive == 1) }></Tab>					
+						<Tab onClick={() => setTabActive(2) } title="Reviews" active={ !!(tabActive == 2) }></Tab>					
+						<Tab onClick={() => setTabActive(3) } title="Questions" active={ !!(tabActive == 3) }></Tab>
+					</Flex>
+
+					<TabActive flexDirection="column" active={ !!(tabActive == 1) }>
+						<h3>Origins</h3>
+						<span>We work hard to ensure that the fruit and vegetables we sell are fresh and high in quality. If we don’t grow them ourselves, we source them from carefully chosen suppliers, preferring to buy locally whenever possible.</span>
+
+						<h3>How to cook</h3>
+						<span>From roasts, salads and soups to casseroles and cakes, Carrots will lend sweetness, texture and colour to an enormous number of recipes.</span>
+
+						<h3>Full of Vitamins!</h3>
+
+						<table>
+							<thead>
+								<tr>
+									<th>Vitamins</th>
+									<th>Quantity</th>
+									<th>% DV</th>
+								</tr>
+							</thead>
+
+							<tbody>
+							{ [0, 1, 2, 3, 4, 5, 6].map((_, index) => {
+								return (
+									<tr>
+										<td>Vitamin A equiv.</td>
+										<td>735 μg</td>
+										<td>104 %</td>
+									</tr>
+								);
+							})}
+							</tbody>
+						</table>
+					</TabActive>
 				</Tabs>
+
+				<RelatedProducts flexDirection="column">
+					<Flex justify="space-between">
+						<h3>Related Products</h3>
+						<h3>More Products</h3>
+					</Flex>
+
+					<Flex justify="space-between">
+					{ [0, 1, 2, 3].map((_, index) => {
+						return (
+							<Product key={ index } />
+						);
+					})}
+					</Flex>
+
+				</RelatedProducts>
 			</Wrapper>
 		</Container>
 	);
