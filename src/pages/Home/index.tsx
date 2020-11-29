@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import Button from '../../components/Button';
 import Flex from '../../components/Flex';
 
-import { Container, Carousel, Basics, Banners, BestSellings, MoreProducts, Quotes, Headline, Box, Image, Title, Info, Price, QuotesBox, Client } from './styles';
+import { Container, Carousel, Basics, Banners, BestSellings, MoreProducts, Quotes, Headline, QuotesBox, Client } from './styles';
 import client from '../../assets/client-1.svg';
+import Product from '../../components/Product';
 
 const Home: FC = () => {
 	return (
@@ -24,29 +25,21 @@ const Home: FC = () => {
 						</Flex>
 					</Flex>
 
-					<Banners flexDirection="column">
-						<Flex flexDirection="column">
-							<span>Banner subfocus</span>
-							<h3>Space for heading</h3>
-						</Flex>
+					{ [0, 1].map((_, index) => {
+						return (
+							<Banners flexDirection="column">
+								<Flex flexDirection="column">
+									<span>Banner subfocus</span>
+									<h3>Space for heading</h3>
+								</Flex>
 
-						<Flex>
-							<Button>Read decipes</Button>
-						</Flex>
+								<Flex>
+									<Button>Read decipes</Button>
+								</Flex>
 
-					</Banners>
-
-					<Banners flexDirection="column">
-						<Flex flexDirection="column">
-							<span>Banner subfocus</span>
-							<h3>Space for heading</h3>
-						</Flex>
-
-						<Flex>
-							<Button>Read decipes</Button>
-						</Flex>
-
-					</Banners>
+							</Banners>
+						);
+					})}
 				</Basics>
 
 				<BestSellings>
@@ -67,16 +60,7 @@ const Home: FC = () => {
 					{ [0, 1, 2].map((_, index) => {
 						return (
 							<Flex key={ index }>
-								<Box>
-									<Image></Image>
-									<Title>Product Title</Title>
-									<span>Space for a small product description</span>
-
-									<Info>
-										<Price>1.48 USD</Price>
-										<Button>Buy now</Button>
-									</Info>
-								</Box>
+								<Product />
 							</Flex>
 						);
 					})}
@@ -103,16 +87,7 @@ const Home: FC = () => {
 					{ [0, 1, 2].map((_, index) => {
 						return (
 							<Flex key={ index }>
-								<Box>
-									<Image></Image>
-									<Title>Product Title</Title>
-									<span>Space for a small product description</span>
-									
-									<Info>
-										<Price>1.48 USD</Price>
-										<Button>Buy now</Button>
-									</Info>
-								</Box>
+								<Product />
 							</Flex>
 						);
 					})}
@@ -144,16 +119,7 @@ const Home: FC = () => {
 					{ [0, 1, 2, 3].map((_, index) => {
 						return (
 							<Flex key={ index }>
-								<Box>
-									<Image></Image>
-									<Title>Product Title</Title>
-									<span>Space for a small product description</span>
-									
-									<Info>
-										<Price>1.48 USD</Price>
-										<Button>Buy now</Button>
-									</Info>
-								</Box>
+								<Product />
 							</Flex>
 						);
 					})}

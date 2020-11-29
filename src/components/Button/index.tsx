@@ -2,7 +2,12 @@ import React, { FC } from 'react';
 
 import { Container } from './styles';
 
-const Button: FC = ({ children, ...rest }) => {
+interface IProps {
+	iconLeft?: boolean;
+	iconRight?: boolean;
+}
+
+const Button: FC<IProps> = ({ children, ...rest }) => {
 	return(
 		<Container { ...rest }>{ children }</Container>
 	);

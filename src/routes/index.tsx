@@ -8,6 +8,7 @@ import Menu from '../components/Menu';
 import Home from '../pages/Home';
 import Category from '../pages/Category';
 import Footer from '../components/Footer';
+import Detail from '../pages/Detail';
 
 const Routes: FC = () => {
 	return (
@@ -20,6 +21,7 @@ const Routes: FC = () => {
 					<div className="main">
 						<Route path="/" exact component={ Home } />
 						<Route path="/category" component={ Category } />
+						<Route path="/product" component={ Detail } />
 					</div>
 
 					{ <Footer /> }

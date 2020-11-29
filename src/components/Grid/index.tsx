@@ -2,14 +2,14 @@ import React, { FC } from 'react';
 
 import { Container } from './styles';
 
-interface FlexProps {
+interface GridProps {
 	gridTemplateColumns: string;
 	gridGap?: number;
 }
 
-const Grid: FC<FlexProps> = ({ children, gridTemplateColumns, gridGap }) => {
+const Grid: FC<GridProps> = ({ children, gridTemplateColumns, gridGap, ...rest }) => {
 	return (
-		<Container gridTemplateColumns={ gridTemplateColumns } gridGap={ gridGap }>{ children }</Container>
+		<Container { ...rest } gridTemplateColumns={ gridTemplateColumns } gridGap={ gridGap }>{ children }</Container>
 	);
 }
 

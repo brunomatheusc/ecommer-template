@@ -1,7 +1,12 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { shade } from 'polished';
 
-export const Container = styled.button`
+interface IProps {
+	iconLeft?: boolean;
+	iconRight?: boolean;
+}
+
+export const Container = styled.button<IProps>`
     display: flex;
     align-items: center;
 
@@ -16,7 +21,20 @@ export const Container = styled.button`
 	border: 2px solid #46760A;
 	box-sizing: border-box;
 	border-radius: 12px;		
-	
+
+	${({ iconLeft }) => iconLeft && css`
+		svg {
+			margin-right: 6px;
+			stroke-width: 2;
+		}
+	`};
+
+	${({ iconRight }) => iconRight && css`
+		svg {
+			margin-left: 6px;
+		}
+	`};
+
 	&:hover {
 		background: ${shade(0.2, '#46760A')};
 	}
