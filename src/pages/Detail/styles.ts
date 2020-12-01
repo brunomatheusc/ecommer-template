@@ -95,6 +95,7 @@ export const Price = styled.div`
 		text-decoration: line-through;
 	}
 `;
+
 export const InputSimple = styled.div`
 	height: 48px;
 	width: 120px;
