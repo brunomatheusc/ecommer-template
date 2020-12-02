@@ -27,7 +27,7 @@ const basicDiv = css`
 	}
 
 	a {
-		color: #6a983c;
+		color: var(--color-primary);
 	}
 
 	a + a {

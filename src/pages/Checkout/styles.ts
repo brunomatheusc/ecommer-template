@@ -75,7 +75,7 @@ export const OrderSummary = styled(Flex)`
 export const ProductTile = styled(Flex)`
 	border-bottom: 1px solid #a9a9a9;
 
-	> div {
+	div:nth-child(1) {
 		margin-right: 16px;
 
 		div {
@@ -90,6 +90,9 @@ export const ProductTile = styled(Flex)`
 		}
 	}
 
+	& + & {
+		margin-top: 32px;
+	}
 `;
 
 export const ProductImage = styled.div`
@@ -106,7 +109,7 @@ export const Price = styled.div`
 	h3 {
 		font-size: 18px;
 		font-weight: 600;
-		color: #6a983c;
+		color: var(--color-primary);
 	}
 
 	strong {
@@ -117,23 +120,28 @@ export const Price = styled.div`
 	}
 `;
 
-export const Box = styled(Flex)``;
+export const Box = styled(Flex)`
+	margin: 16px 0;
+`;
 
 export const InputSimple = styled.div`
 	height: 32px;
-	width: 92px;
+	width: 102px;
 	background: #F9F9F9;
 
 	border: 1px solid #D1D1D1;
 	box-sizing: border-box;
 	border-radius: 12px;	
 
+
 	> div {
 		margin-top: 0;
-		padding: 4px;	
+		padding: 6px;	
+		margin-right: 0 !important;
 
 		span {
 			padding-right: 6px;
+			font-size: 12px;
 			border-right: solid 1px #ccc;
 		}
 	}
@@ -145,11 +153,67 @@ export const InputSimple = styled.div`
 
 	select {
 		padding-left: 6px;
-		font-size: 16px;
+		font-size: 12px;
 		font-weight: bold;
 	}
 
 	input {
 		padding: 0 24px;
 	}
+`;
+
+export const Totals = styled(Flex)`
+	margin: 32px 0 40px 0;
+`;
+
+export const PromoCode = styled(Flex)`
+	margin: 32px 0 40px 0;
+	flex: 1;
+	position: relative;
+
+	input {
+		flex: 1;
+	}
+
+	button {
+		display: block;
+		position: absolute;
+
+		top: 10px;
+		right: 16px;
+
+		background: transparent;
+		border: none;
+
+		font-size: 15px;
+		font-weight: bold;
+	}
+`;
+
+export const DeliveryAt = styled.div`
+	font-size: 12px;
+	font-weight: 400;
+	color: var(--color-primary);
+`;
+
+export const Total = styled.h1`
+	font-size: 26px;
+	font-weight: bold;
+	color: var(--color-primary);
+`;
+
+export const BillingMethod = styled(Flex)`
+
+`;
+
+export const PaymentMethod = styled(Flex)`
+
+`;
+
+export const AdditionInformations = styled(Flex)`
+
+`;
+
+export const Confirmation = styled(Flex)`
+
 `;

@@ -11,7 +11,7 @@ export const Container = styled.div`
 		font-size: 14px;
 		font-weight: 400;
 		text-decoration: none;
-		color: #6a983c;
+		color: var(--color-primary);
 
 		margin: 8px 0;
 	}

@@ -15,7 +15,7 @@ export const Container = styled.div<TabProps>`
 	border-bottom: 1px solid #f5f5f5;
 
 	${({ active }) => active && css`
-		border-bottom: 2px solid #6A983C;
+		border-bottom: 2px solid var(--color-primary);
 	`};
 
 	& + & {

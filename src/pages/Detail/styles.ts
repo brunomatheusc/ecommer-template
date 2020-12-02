@@ -85,7 +85,7 @@ export const Price = styled.div`
 	h3 {
 		font-size: 26px;
 		font-weight: 600;
-		color: #6a983c;
+		color: var(--color-primary);
 	}
 
 	strong {
@@ -150,7 +150,7 @@ export const Badge = styled.span`
 
 	background: #f4f8ec;
 	border-radius: 12px;
-	color: #6a983c;
+	color: var(--color-primary);
 
 	& + & {
 		margin-left: 0;

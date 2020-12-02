@@ -14,12 +14,12 @@ const Navigation: FC = () => {
 
 			<Options>
 				<Frame onClick={ () => setType('grid') }>
-					<FiGrid color="#6a983c" />
+					<FiGrid color="var(--color-primary)" />
 					<span>Grid view</span>
 				</Frame>
 
 				<Frame onClick={ () => setType('list') }>
-					<FiList color="#6a983c" className="inactive" />
+					<FiList color="var(--color-primary)" className="inactive" />
 					<span>List view</span>
 				</Frame>
 

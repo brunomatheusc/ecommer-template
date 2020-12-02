@@ -40,5 +40,6 @@ export default createGlobalStyle`
 
 	:root {
 		--color-white: #fff;
+		--color-primary: #6a983c;
 	}
 `;

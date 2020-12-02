@@ -12,7 +12,7 @@ export const Container = styled.button<IProps>`
 
 	height: 48px;
 	padding: 12px 16px;
-	background: #6A983C;
+	background: var(--color-primary);
 
 	font-size: 15px;
 	font-weight: bold;
