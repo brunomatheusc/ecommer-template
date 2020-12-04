@@ -190,6 +190,39 @@ export const PromoCode = styled(Flex)`
 	}
 `;
 
+export const Badges = styled(Flex)``;
+
+export const InputRadio = styled(Flex)`
+	flex: 1;
+	height: 48px;
+	padding: 12px 16px;
+	background: #f9f9f9;
+
+	border: 1px solid #d1d1d1;
+	box-sizing: border-box;
+	border-radius: 12px;
+
+	${Badges} {
+		position: absolute;
+		left: 330px;
+	}
+
+	& + & {
+		margin-top: 16px;
+	}
+
+	label {
+		font-size: 12px;
+		font-weight: 600;
+		margin-left: 16px;
+	}
+
+	svg {
+		width: 54px;
+		height: 16px;
+	}
+`;
+
 export const DeliveryAt = styled.div`
 	font-size: 12px;
 	font-weight: 400;
@@ -203,17 +236,128 @@ export const Total = styled.h1`
 `;
 
 export const BillingMethod = styled(Flex)`
+	margin-top: 64px;
 
+	> div {
+		> small {
+			margin-top: 4px;
+			margin-bottom: 32px;
+		}
+	}
 `;
 
 export const PaymentMethod = styled(Flex)`
+	margin-top: 64px;
 
+	${InputRadio} {
+		margin-top: 16px;
+	}
+`;
+
+export const PaymentHeader = styled(Flex)`
+	margin-bottom: 32px;
+
+	input + label {
+		margin-left: 16px;
+	}
+
+	input {
+		width: 24px;
+		height: 24px;
+	}
+
+	label {
+		font-size: 12px;
+		font-weight: 600;
+	}
+
+	img + img {
+		margin-left: 12px;
+	}
+`;
+
+export const PaymentBody = styled(Flex)`
+	margin-top: 32px;
+`;
+
+export const CardHolder = styled(Flex)`
+	margin-right: 32px;
+`;
+
+export const ExpirationCVC = styled(Flex)`
+	div + div {
+		margin-left: 16px;
+	}
+`;
+
+export const CardBox = styled(Flex)`
+	background: #ffffff;
+
+	border: 1px solid #d1d1d1;
+	box-sizing: border-box;
+	border-radius: 12px;
+
+	padding: 16px;
 `;
 
 export const AdditionInformations = styled(Flex)`
+	margin-top: 64px;
 
+	> div {
+		> small {
+			margin-top: 4px;
+			margin-bottom: 32px;
+		}
+	}
+
+	textarea {
+		height: 150px;
+		padding: 11px 21px;
+		background: #f9f9f9;
+		color: #a9a9a9;
+
+		border: 1px solid #d1d1d1;
+		box-sizing: border-box;
+		border-radius: 12px;		
+	}
+`;
+
+export const InputCheckbox = styled(Flex)`
+	height: 48px;
+	padding: 11px 21px;
+	background: #f9f9f9;
+	color: #a9a9a9;
+
+	border: 1px solid #d1d1d1;
+	box-sizing: border-box;
+	border-radius: 12px;		
+
+	input + span {
+		margin-left: 8px;
+	}
+
+	span {
+		font-size: 14px;
+		font-weight: 400;
+		color: #151515;
+	}
 `;
 
 export const Confirmation = styled(Flex)`
+	margin-top: 64px;
 
+	> div {
+		> small {
+			margin-top: 4px;
+			margin-bottom: 32px;
+		}
+	}
+
+	${InputCheckbox} {
+		margin-top: 16px;
+	}
+
+	button {
+		margin: 32px 0;
+	}
 `;

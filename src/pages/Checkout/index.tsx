@@ -1,10 +1,20 @@
 import React, { FC } from 'react';
-import { MdClose, MdFavoriteBorder, MdGradient, MdRemove, MdStar, MdStarBorder } from 'react-icons/md';
+import { MdClose, MdFavoriteBorder, MdGradient, MdStar, MdStarBorder } from 'react-icons/md';
+import Badge from '../../components/Badge';
 import Breadcrumb from '../../components/Breadcrumb';
 import Flex from '../../components/Flex';
 import Grid from '../../components/Grid';
 
-import { Container, Wrapper, BillingInfo, OrderSummary, Billing, Input, CheckboxWrapper, ProductTile, ProductImage, Price, Box, InputSimple, Totals, PromoCode, DeliveryAt, Total, BillingMethod, PaymentMethod, AdditionInformations, Confirmation } from './styles';
+import fedexLogo from '../../assets/fedex.svg';
+import dhlLogo from '../../assets/dhl.svg';
+import mcLogo from '../../assets/mc.svg';
+import visaLogo from '../../assets/Visa_Inc._logo 1.svg';
+import paypal from '../../assets/paypal.svg';
+import bitcoin from '../../assets/bitcoin.svg';
+import safe from '../../assets/security-safety.svg';
+
+import { Container, Wrapper, BillingInfo, OrderSummary, Billing, Input, CheckboxWrapper, ProductTile, ProductImage, Price, Box, InputSimple, Totals, PromoCode, DeliveryAt, Total, BillingMethod, PaymentMethod, AdditionInformations, Confirmation, InputRadio, Badges, CardBox, PaymentHeader, PaymentBody, CardHolder, ExpirationCVC, InputCheckbox } from './styles';
+import Button from '../../components/Button';
 
 const Checkout: FC = () => {
 	return (
@@ -73,8 +83,38 @@ const Checkout: FC = () => {
 						<h3>Billing method</h3>
 						
 						<Flex justify="space-between">
-							<small>Please enter your billing info</small>
+							<small>Please enter your payment method</small>
 							<small>Step 2 of 5</small>
+						</Flex>
+
+						<Flex flexDirection="column">
+							<InputRadio justify="space-between" align="center">
+								<Flex align="center">
+									<input type="radio" name="" id=""/>
+									<label htmlFor="">FedEx</label>
+								</Flex>
+
+								<Badges>
+									<Badge>+32 USD</Badge>
+									<Badge>Additional price</Badge>
+								</Badges>
+
+								<img src={ fedexLogo } alt=""/>
+							</InputRadio>
+
+							<InputRadio justify="space-between" align="center">
+								<Flex align="center">
+									<input type="radio" name="" id=""/>
+									<label htmlFor="">DHL</label>
+								</Flex>
+
+								<Badges>
+									<Badge>+15 USD</Badge>
+									<Badge>Additional price</Badge>
+								</Badges>
+
+								<img src={ dhlLogo } alt=""/>
+							</InputRadio>
 						</Flex>
 					</BillingMethod>
 
@@ -85,14 +125,80 @@ const Checkout: FC = () => {
 							<small>Please enter your billing info</small>
 							<small>Step 3 of 5</small>
 						</Flex>
+
+						<CardBox flexDirection="column">
+							<PaymentHeader flex={1} justify="space-between">
+								<Flex align="center">
+									<input type="radio" name="" id=""/>
+									<label htmlFor="">Credit Card</label>
+								</Flex>
+
+								<Flex>
+									<img src={ visaLogo } alt=""/>
+									<img src={ mcLogo } alt=""/>
+								</Flex>
+							</PaymentHeader>
+
+							<Flex flexDirection="column">
+								<Flex flexDirection="column">
+									<label htmlFor="">Card number</label>
+									<Input placeholder="Card number" />
+								</Flex>
+
+								<PaymentBody>
+									<CardHolder flex={ 1 } flexDirection="column">
+										<label htmlFor="">Card holder</label>
+										<Input placeholder="Card holder" />
+									</CardHolder>
+
+									<ExpirationCVC>
+										<Flex flexDirection="column">
+											<label htmlFor="">Expiration Date</label>
+											<Input placeholder="MM/YY" />
+										</Flex>
+
+										<Flex flexDirection="column">
+											<label htmlFor="">CVC</label>
+											<Input placeholder="CVC" />
+										</Flex>
+									</ExpirationCVC>
+								</PaymentBody>
+							</Flex>
+						</CardBox>
+
+						<Flex flexDirection="column">
+							<InputRadio justify="space-between" align="center">
+								<Flex align="center">
+									<input type="radio" name="" id=""/>
+									<label htmlFor="">Paypal</label>
+								</Flex>
+
+								<img src={ paypal } alt=""/>
+							</InputRadio>
+
+							<InputRadio justify="space-between" align="center">
+								<Flex align="center">
+									<input type="radio" name="" id=""/>
+									<label htmlFor="">Bitcoin</label>
+								</Flex>
+
+								<img src={ bitcoin } alt=""/>
+							</InputRadio>
+						</Flex>
+
 					</PaymentMethod>
 
 					<AdditionInformations flexDirection="column">
 						<h3>Additional informations</h3>
 						
 						<Flex justify="space-between">
-							<small>Please enter your billing info</small>
+							<small>Need something else? We will make it for you!</small>
 							<small>Step 4 of 5</small>
+						</Flex>
+
+						<Flex flexDirection="column">
+							<label htmlFor="">Order notes</label>
+							<textarea name="" id="" cols={30} rows={10}>Need a specific delivery day? Sending a gitf? Let’s say ...</textarea>
 						</Flex>
 					</AdditionInformations>
 
@@ -100,11 +206,34 @@ const Checkout: FC = () => {
 						<h3>Confirmation</h3>
 						
 						<Flex justify="space-between">
-							<small>Please enter your billing info</small>
+							<small>We are getting to the end. Just few clicks and your order si ready!</small>
 							<small>Step 5 of 5</small>
 						</Flex>
-					</Confirmation>
 
+						<InputCheckbox align="center">
+							<input type="checkbox" name="" id=""/>
+							<span>I agree with sending an Marketing and newsletter emails. No spam, promissed!</span>
+						</InputCheckbox>
+
+						<InputCheckbox align="center">
+							<input type="checkbox" name="" id=""/>
+							<span>I agree with our terms and conditions and privacy policy.</span>
+						</InputCheckbox>
+
+						<Flex>
+							<Button>Complete Order</Button>
+						</Flex>
+
+						<Flex flexDirection="column" align="flex-start">
+							<img src={ safe } alt=""/>
+							<span>All your data are safe</span>
+							<small>
+								We are using the most advanced<br /> 
+								security to provide you the best<br /> 
+								experience ever.								
+							</small>
+						</Flex>
+					</Confirmation>
 				</Billing>
 				
 				<OrderSummary>
