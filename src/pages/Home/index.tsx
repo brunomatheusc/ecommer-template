@@ -6,6 +6,7 @@ import Flex from '../../components/Flex';
 import { Container, Carousel, Basics, Banners, BestSellings, MoreProducts, Quotes, Headline, QuotesBox, Client } from './styles';
 import client from '../../assets/client-1.svg';
 import Product from '../../components/Product';
+import { MdChevronRight } from 'react-icons/md';
 
 const Home: FC = () => {
 	return (
@@ -21,22 +22,21 @@ const Home: FC = () => {
 						<Link to="/category">Kitchen</Link>
 						
 						<Flex>
-							<Button>More categories</Button>
+							<Button buttonType="bright" size="medium" iconRight>More categories<MdChevronRight strokeWidth={2} color="#000" /></Button>
 						</Flex>
 					</Flex>
 
 					{ [0, 1].map((_, index) => {
 						return (
-							<Banners flexDirection="column">
+							<Banners flexDirection="column" key={ index }>
 								<Flex flexDirection="column">
 									<span>Banner subfocus</span>
 									<h3>Space for heading</h3>
 								</Flex>
 
 								<Flex>
-									<Button>Read decipes</Button>
+									<Button buttonType="stroke" iconRight>Read decipes<MdChevronRight strokeWidth={2} color="#6a983c" /></Button>
 								</Flex>
-
 							</Banners>
 						);
 					})}
@@ -52,7 +52,7 @@ const Home: FC = () => {
 						<Link to="/category">Baby</Link>
 
 						<Flex>
-							<Button>More products</Button>
+							<Button buttonType="bright" size="medium" iconRight>More products<MdChevronRight strokeWidth={2} color="#000" /></Button>
 						</Flex>						
 					</Flex>
 
@@ -78,7 +78,7 @@ const Home: FC = () => {
 						<Link to="/category">Baby</Link>
 
 						<Flex>
-							<Button>More products</Button>
+							<Button buttonType="bright" size="medium" iconRight>More products<MdChevronRight strokeWidth={2} color="#000" /></Button>
 						</Flex>
 						
 					</Flex>

@@ -1,5 +1,7 @@
 import React, { FC } from 'react';
 import { MdStar, MdStarBorder } from 'react-icons/md';
+import Button from '../Button';
+import Input from '../Input';
 
 import { Container, Wrapper, Title, Categories, CategoryWrapper, CategoryName, Quantity, Brands, Rating, Price, MinMax, Finish } from './styles';
 
@@ -61,20 +63,14 @@ const Sidebar: FC = () => {
 				<Wrapper><input type="range" name="" id="" min="0" max="1000" /></Wrapper>
 
 				<MinMax>
-					<div>
-						<span>Min</span>
-						<input type="text" placeholder="0" />
-					</div>
+					<Input label="Min" placeholder="0" />
 
-					<div>
-						<span>Max</span>
-						<input type="text" placeholder="1000" />
-					</div>
+					<Input label="Max" placeholder="1000" />
 				</MinMax>
 
 				<Finish>
-					<button>Apply</button>
-					<button>Reset</button>
+					<Button buttonType="colored" size="small">Apply</Button>
+					<Button buttonType="colored" size="small">Reset</Button>
 				</Finish>
 			</Price>
 		</Container>

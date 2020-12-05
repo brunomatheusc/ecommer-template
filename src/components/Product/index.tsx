@@ -20,7 +20,7 @@ const Product: FC = () => {
 
 			<Info>
 				<Price>1.48 USD</Price>
-				<Button>Buy now</Button>
+				<Button buttonType="colored" size="small">Buy now</Button>
 			</Info>
 		</Container>
 	);

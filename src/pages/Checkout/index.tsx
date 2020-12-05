@@ -221,7 +221,7 @@ const Checkout: FC = () => {
 						</InputCheckbox>
 
 						<Flex>
-							<Button>Complete Order</Button>
+							<Button size="large" buttonType="colored">Complete Order</Button>
 						</Flex>
 
 						<Flex flexDirection="column" align="flex-start">
